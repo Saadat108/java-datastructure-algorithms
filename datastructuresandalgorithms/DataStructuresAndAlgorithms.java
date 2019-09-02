@@ -7,7 +7,7 @@ package datastructuresandalgorithms;
 
 /**
  *
- * @author Lubna
+ * @author Saadat
  */
 public class DataStructuresAndAlgorithms {
 
