@@ -4,20 +4,18 @@
  * and open the template in the editor.
  */
 /*
-interpolation search needs an array or any other data structure that already has it's nontent/elements sorted out in a particular order, 
-I have implemented this interpolation search in an array arranged in ascending order, the array is in the class LinearSearchDataSet.java
+binary search needs an array or any other data structure that already has it's nontent/elements sorted out in a particular order, 
+I have implemented this biary search in an array arranged in ascending order, the array is in the class LinearSearchDataSet.java
 */
-package algorithms;
+package search_algorithms;
 
-/**
- *
- * @author Saadat
- */
-public class interpolationSearch {
-    public static void main(String [] args){
+
+public class binarySearch {
+
+public static void main(String [] args){
     
-    LinearSearchDataSet data = new LinearSearchDataSet(10000);
-    int search = 500;
+    LinearSearchDataSet data = new LinearSearchDataSet(10);
+    int search = -1;
     Boolean isFound = false;
     
     int low = 0;
@@ -30,12 +28,11 @@ public class interpolationSearch {
             break;
         }
         data.numberTry++;
-        mid =low + ((high-low)/(data.data[high]-data.data[low]))*(search-data.data[low]);
         
-        System.out.println("low: "+low);
-        System.out.println("mid: "+mid);
-        System.out.println("high: "+high);
-        
+        mid =(low+high)/2;
+//        System.out.println("low: "+low);
+//        System.out.println("mid: "+mid);
+//        System.out.println("high: "+high);
         if(data.data[mid]==search){
             isFound = true;
             System.out.print("number "+search+" found after "+data.numberTry+" tries");
@@ -48,5 +45,5 @@ public class interpolationSearch {
             high = mid-1; 
         }
     }
-}   
+}    
 }
