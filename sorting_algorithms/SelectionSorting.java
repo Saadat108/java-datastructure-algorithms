@@ -26,7 +26,7 @@ public class SelectionSorting {
         }
     }
     public static void main(String[] args){
-        int[] arr = new int []{99,8,7,6,5,4,3,2,1,0,9};
+        int[] arr = new int []{99,8,7,6,6,5,4,3,2,1,0,9};
         SelectionSort(arr);
     }
 }
