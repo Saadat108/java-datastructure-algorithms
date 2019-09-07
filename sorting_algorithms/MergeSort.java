@@ -7,7 +7,7 @@ package sorting_algorithms;
 import java.util.Arrays;
 /**
  *
- * @author Lubna
+ * @author Saadat
  */
 public class MergeSort {
     int[] arr;
@@ -35,14 +35,15 @@ public class MergeSort {
         }
     }
     void MergePart(int lowerIndex, int middleIndex, int higherIndex){
-        for(int i=0; i<higherIndex; i++){ // copy original array to temp array
+        for(int i=lowerIndex; i<=higherIndex; i++){ // copy original array to temp array
             tempArr[i]= arr[i];
-            
+            System.out.println("tempArr: " + Arrays.toString(tempArr)+" low:"+lowerIndex+ " mid:"+middleIndex+ " high"+higherIndex );
         }
+        
         int i= lowerIndex;
         int j= middleIndex+1;
         int k= lowerIndex;
-        while(i<middleIndex && j<=higherIndex){
+        while(i<=middleIndex && j<=higherIndex){
             if(tempArr[i]<= tempArr[j]){
                 arr[k]= tempArr[i];
                 i++;
