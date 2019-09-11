@@ -9,6 +9,6 @@ package Graph.DFS;
  *
  * @author Saadat
  */
-public class AdjList {
-    
+public class AdjList {// Adjacent list is used to traverse DFS
+    Node head;
 }
